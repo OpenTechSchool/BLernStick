@@ -18,7 +18,7 @@ Per Pinning festlegen, dass der Bankix-Kernel immer genutzt wird
 
 Paketquelle von heise.de eintragen
 
-    echo "deb http://www.heise.de/ct/projekte/ctbankix precise main" > /etc/apt/sources.list.d/ctbankix
+    echo "deb http://www.heise.de/ct/projekte/ctbankix precise main" > /etc/apt/sources.list.d/ctbankix.list
 
 Paketquellen aktualisieren (eine GPG-Warnung ist hier normal)
 
@@ -40,11 +40,11 @@ Paketquellen aktualisieren
 
 Bankix-Kernel installieren (Version ist herauszufinden über `grep ^Package: /var/lib/apt/lists/www.heise.de_*_Packages`)
 
-    apt-get install linux-image-3.5.???
+    apt-get install linux-image-3.?.???
 
 alten Kernel deinstallieren (Version ist herauszufinden über `dpkg -l | grep linux-image-`)
 
-    apt-get remove linux-image-3.2.???
+    apt-get remove linux-image-3.?.???
 
 Kernelabhängigkeiten unterbinden
 
